@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       parallel {
-        stage('Build') {
+        stage('Build project') {
           steps {
             echo 'Building code'
           }
@@ -33,7 +33,7 @@ pipeline {
         branch 'main'
       }
       parallel {
-        stage('Deploy') {
+        stage('Check point') {
           steps {
             input(message: 'Do you want to proceed?', id: 'Yes')
             echo 'Deploying code'
