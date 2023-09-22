@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
           steps {
             echo 'Testing code'
-            echo "Executed in Environment ${env}"
+            echo "Executed in Environment ${envt}"
           }
         }
 
@@ -27,6 +27,6 @@ pipeline {
 
   }
   environment {
-    env = 'INT'
+    envt = 'INT'
   }
 }
