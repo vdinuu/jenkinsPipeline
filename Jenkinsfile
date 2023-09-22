@@ -21,7 +21,7 @@ pipeline {
             name = "diya"
           }
           steps {
-            writeFile(file: 'LogFile.log', text: "The env is ${env} and name is ${name}")
+            writeFile(file: 'LogFile.log', text: "The env is ${envt} and name is ${name}")
           }
         }
 
