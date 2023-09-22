@@ -17,8 +17,11 @@ pipeline {
         }
 
         stage('Create Log File') {
+          environment {
+            name = "diya"
+          }
           steps {
-            writeFile(file: 'LogFile.log', text: 'This is a log file')
+            writeFile(file: 'LogFile.log', text: "The env is ${env} and name is ${name}")
           }
         }
 
